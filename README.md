@@ -1,43 +1,44 @@
-### ((TITLE)).
+# teachless
 
-- - -
+![Python Version](https://img.shields.io/badge/python-3.7+-blue.svg)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-# About the project:
+Open source software for model training and prediction.
 
-* The project was created by ((OWNER)).
+`teachless` provides a simple web interface to train and retrain machine learning models using local files, remote URLs, or datasets from Hugging Face. You can also use the trained models for predictions.
 
-* This project is licensed under the MIT open-source license.
+## Features
 
-- - -
+* **Flexible Training**: Train models using local feature/label files or from remote sources like Hugging Face.
+* **Re-training**: Upload an existing model to continue training with new data.
+* **Data Handling**: Specify columns to drop, define label columns, and select specific rows or ranges for training.
+* **Prediction Interface**: A simple tab to upload your model and data to get predictions.
+* **Web UI**: Built with Gradio for an easy-to-use interface.
 
-# What it does?
+## Installation
 
-* ((FEATURES)).
+You can install `teachless` directly from the GitHub repository using `pip`.
 
-- - -
+```bash
+pip install git+https://github.com/YaronKoresh/teachless.git
+```
 
-# Basic installation:
+This will also install the required dependencies, such as `gradio` and `definers`.
 
-* ((INSTALLATION)).
+## Usage
 
-- - -
+Once installed, you can launch the Gradio web interface by running the following command in your terminal:
 
-# Basic usage:
+```bash
+teachless
+```
 
-* ((USAGE)).
+This will start a local web server, and you can access the user interface by navigating to the provided URL.
 
-- - -
+## License
 
-# Do you need help?
+This project is licensed under the MIT License. See the `LICENSE` file for details.
 
-* Before asking general support questions, please make sure you are using the [latest version](https://github.com/YaronKoresh/((REPO))/releases/latest).
+## Contributing & Issues
 
-* When looking for support, please first search for your question in [open or closed issues](https://github.com/YaronKoresh/((REPO))/issues?q=is%3Aissue).
-
-* GitHub issues are a good way for tracking enhancements and bugs, but also for get some help.
-
-* Feel free to open new issues, using one of the available templates, or create an issue from scratch.
-
-- - -
-
-**Enjoy :)**
+Contributions are welcome! For bug reports and feature requests, please open an issue on the [Bug Tracker](https://github.com/YaronKoresh/teachless/issues).
