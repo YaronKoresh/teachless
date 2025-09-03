@@ -1,6 +1,16 @@
 import gradio as gr
 import spaces
-from definers import train, predict, css
+from definers import (
+    apt_install,
+    install_faiss,
+    install_ffmpeg,
+    train, predict,
+    css
+)
+
+apt_install()
+install_faiss()
+install_ffmpeg()
 
 @spaces.GPU(duration=240)
 def handle_training(
