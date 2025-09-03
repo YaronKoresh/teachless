@@ -19,8 +19,8 @@ classifiers = [
 ]
 
 dependencies = [
-    "spaces",
-    "gradio", 
+    "spaces==0.40.1",
+    "gradio==4.37.2", 
     "definers[cuda] @ git+https://github.com/YaronKoresh/definers.git"
 ]
 
