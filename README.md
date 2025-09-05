@@ -17,9 +17,8 @@ Open source software for model training and prediction.
 
 ## Installation
 
-You can install `teachless` directly from the GitHub repository using `pip`.
-
 ```bash
+pip install "definers[cuda] @ git+https://github.com/YaronKoresh/definers.git" --extra-index-url https://pypi.nvidia.com
 pip install git+https://github.com/YaronKoresh/teachless.git
 ```
 
