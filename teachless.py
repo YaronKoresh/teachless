@@ -1,12 +1,11 @@
 import gradio as gr
 import spaces
 from definers import (
-    apt_install,
-    pip_install,
-    google_drive_download,
     install_ffmpeg,
-    train, predict,
-    css
+    apt_install, pip_install,
+    google_drive_download,
+    train, infer,
+    css, theme
 )
 
 install_ffmpeg()
@@ -31,10 +30,10 @@ def handle_training(
 
 @spaces.GPU(duration=180)
 def handle_prediction(pred,model):
-    return predict(pred,model)
+    return infer(model, pred)
 
 def main():
-    with gr.Blocks(theme=gr.themes.Citrus(), css=css()) as app:
+    with gr.Blocks(theme=theme(), css=css()) as app:
             gr.Markdown("# Model Training and Prediction")
 
             with gr.Tabs():
