@@ -77,7 +77,7 @@ def main():
                         outputs=[predict_output]
                     )
 
-    app.queue().launch(inbrowser=True)
+    app.queue().launch(server_name="0.0.0.0", server_port=7860)
 
 if __name__ == "__main__":
     main()
