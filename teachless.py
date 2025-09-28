@@ -56,8 +56,8 @@ def main():
                             train_output = gr.File(label="Trained Model Output")
 
                     train_button.click(
-                        fn=keep_alive,
-                        inputs=[gr.State(handle_training), local_features, local_labels, model_train, remote, label_columns, revision, tpe, drop_list, selected_rows],
+                        fn=keep_alive(handle_training),
+                        inputs=[local_features, local_labels, model_train, remote, label_columns, revision, tpe, drop_list, selected_rows],
                         outputs=[train_output]
                     )
 
@@ -72,8 +72,8 @@ def main():
                             predict_output = gr.File(label="Prediction Output")
 
                     predict_button.click(
-                        fn=keep_alive,
-                        inputs=[gr.State(handle_prediction), prediction_data, model_predict],
+                        fn=keep_alive(handle_prediction),
+                        inputs=[prediction_data, model_predict],
                         outputs=[predict_output]
                     )
 
