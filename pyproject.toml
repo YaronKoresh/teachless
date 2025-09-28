@@ -21,7 +21,6 @@ classifiers = [
 dependencies = [
     "spaces",
     "gradio",
-    "fastapi==0.103.0",
 ]
 
 [project.urls]
