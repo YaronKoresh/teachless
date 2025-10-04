@@ -9,12 +9,6 @@ from definers import (
 )
 
 install_ffmpeg()
-apt_install()
-
-google_drive_download("1jkmEQxSHYff05opUQ4czyDNj-2uQIK68", "faiss-1.12.0-py3-none-manylinux_2_35_x86_64.whl", False)
-pip_install("faiss-1.12.0-py3-none-manylinux_2_35_x86_64.whl")
-
-pip_install("numpy==1.26.4")
 
 @spaces.GPU(duration=240)
 def handle_training(
@@ -34,7 +28,7 @@ def handle_prediction(pred,model):
 
 def main():
     with gr.Blocks(theme=theme(), css=css()) as app:
-            gr.Markdown("# Model Training and Prediction")
+            gr.Markdown("# Train your own models")
 
             with gr.Tabs():
 
