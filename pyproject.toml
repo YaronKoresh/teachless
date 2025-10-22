@@ -21,7 +21,7 @@ classifiers = [
 dependencies = [
     "spaces",
     "gradio",
-    "definers @ git+https://github.com/YaronKoresh/definers.git",
+    "definers[cuda] @ git+https://github.com/YaronKoresh/definers.git",
 ]
 
 [project.urls]
